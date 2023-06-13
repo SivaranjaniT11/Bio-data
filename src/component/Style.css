@@ -1,0 +1,132 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Roboto Slab', serif;
+  }
+  :root{
+    --dark-color:#000000;
+    --white-color:#fff;
+    --light-color:#b6b2b2;
+    --success-color:#1e7a24;
+    --success-color1:#06d414;
+    --gray-color:#bdbdbd;
+    --dange-color:#ff0000;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .form-control-class {
+    /* padding: 10px; */
+    width: 100%; 
+    position: relative;
+    margin-bottom:10%;
+  }
+  .Form-1 input{
+    border: 2px solid var(--gray-color);
+  }
+  .Form-1{
+    text-transform: capitalize;
+    text-align: left;
+    color: var(--dark-color);
+  }
+  .form-control-class input{
+    border-radius: 10px;
+    width:60%;
+    min-width:28vw;
+    margin-bottom:5%;
+    padding: 15px;
+    border: 1px solid var(--gray-color);
+    background: var(--white-color);
+    outline: none;
+    color: var(--dark-color);
+    font-size: 1rem;position: relative;
+  }
+  .form-control-class span{
+    position: absolute;
+    left: 0; 
+    padding: 15px;
+    color: var(--light-color);
+    font-size: 1rem;
+    transition:0.5s ;
+  } 
+ 
+  .form-control-class input~span {
+    color: var(--dark-color);
+    transform: translateX(10px) translateY(-7px);
+    padding: 0 10px;
+    background: var(--white-color);
+  }
+  
+  button {
+    background: linear-gradient(to right,var(--success-color),var(--success-color1));
+    padding: 10px 20px;
+    border: none;
+    margin-top: 10px;
+    margin-bottom: 3%;
+    cursor: pointer;
+    margin: 2%;
+  }
+  
+ 
+.invalid {
+    border:1px solid var(--dange-color) !important;
+    /* color: var(--success-color); */
+   }
+   /* .valid {
+    border:1px solid var(--success-color1) !important;
+   } */
+   @media (max-width:576px) {
+    body {
+      display: flex;
+    }
+    .form-control-class{
+        
+        margin-bottom:10%;
+    }
+  
+    .form-control-class input{
+        min-width:45vw;
+        padding: 12px;
+        border: 1px solid var(--gray-color);
+        background: var(--white-color);
+        outline: none;
+        color: var(--dark-color);
+        font-size: 1rem;position: relative;
+      }
+      .form-control-class span{
+        position: absolute;
+        left: 0; 
+        padding: 15px;
+        pointer-events: none;
+        color: var(--light-color);
+        font-size:.8rem;
+        transition:0.5s ;
+      } 
+  
+  }
+  @media (max-width:991px) {
+    body {
+      display: flex;
+    }
+    .form-control-class{
+        
+        margin-bottom:10%;
+    }
+  
+    .form-control-class input{
+        min-width:50vw;
+        padding: 12px;
+      }
+      .form-control-class span{
+        position: absolute;
+        left: 0; 
+      } 
+  
+  }
